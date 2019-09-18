@@ -6,11 +6,13 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from './containers/AppContainer/index'
 import configureStore from './reduxSetup/configureStore'
 
-// const store = configureStore();
+const store = configureStore();
 
 render(
+    <Provider store={store}>
     <Router>
         <App />
-    </Router>,
+    </Router>
+    </Provider>,
     document.getElementById('root')
 )
