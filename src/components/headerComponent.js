@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 import { styled } from '@material-ui/styles'
 import Badge from '@material-ui/core/Badge';
 import Box from '@material-ui/core/Box';
@@ -32,6 +33,9 @@ export default function CustomizedBadges(props) {
         <PersonProfile onClick={props.clickHandler}/>
       </Box>
     </Box>
+    <Link activeClass="active" smooth={true} offset={-70} duration= {500} to="home">Home</Link>
+    <Link activeClass="active" smooth={true} offset={-70} duration= {500} to="makeStyles-root-67">Hot Items</Link>
+    <Link activeClass="active" smooth={true} offset={-70} duration= {500} to="about-us">About us</Link>
     </AppBar>
   );
 }
