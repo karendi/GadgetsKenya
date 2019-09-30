@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import CarouselPage from '../../components/carouselComponent'
 import ButtonAppbar from '../../components/headerComponent'
+import SingleLineGridList from '../../components/gridListComponent'
+import ImgMediaCard from '../../components/aboutUsComponent'
 import style from './styles.scss'
 
 class HomePageContainer extends Component {
@@ -17,9 +19,11 @@ class HomePageContainer extends Component {
 
     render(){
         return(
-        <div>
+        <div className="home" >
             <ButtonAppbar clickHandler={ this.onProfileClick }/>
             <CarouselPage />
+            <SingleLineGridList />
+            <ImgMediaCard />
             </div>
             )
         }
